@@ -71,6 +71,11 @@ public class EduControl {
     private Image imgSSynt8 = new Image("file:resources/images/s/synt8.jpg");
     private Image imgSSynt9 = new Image("file:resources/images/s/synt9.jpg");
     private Image imgSSynt10 = new Image("file:resources/images/s/synt10.jpg");
+    private Image imgSSynt11 = new Image("file:resources/images/s/synt11.jpg");
+    private Image imgSSynt12 = new Image("file:resources/images/s/synt12.jpg");
+    private Image imgSSynt13 = new Image("file:resources/images/s/synt13.jpg");
+    private Image imgSSynt14 = new Image("file:resources/images/s/synt14.jpg");
+
 
     private ImageView imgViewSTrue1 = new ImageView(imgSTrue1);
     private ImageView imgViewSTrue2 = new ImageView(imgSTrue2);
@@ -105,6 +110,10 @@ public class EduControl {
     private ImageView imgViewSSynt8 = new ImageView(imgSSynt8);
     private ImageView imgViewSSynt9 = new ImageView(imgSSynt9);
     private ImageView imgViewSSynt10 = new ImageView(imgSSynt10);
+    private ImageView imgViewSSynt11 = new ImageView(imgSSynt11);
+    private ImageView imgViewSSynt12 = new ImageView(imgSSynt12);
+    private ImageView imgViewSSynt13 = new ImageView(imgSSynt13);
+    private ImageView imgViewSSynt14 = new ImageView(imgSSynt14);
 
     private Group dogMin1;
     private Group dogMin2;
