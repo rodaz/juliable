@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="829.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.diit.controllers.EduControl">
+  <tabs>
+    <Tab text="R-триггер">
+      <content>
+            <SplitPane dividerPositions="0.1" orientation="VERTICAL">
+              <items>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="50.0" text="Таблица истинности" textAlignment="CENTER" wrapText="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Line startX="-100.0" strokeWidth="2.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Line>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Button mnemonicParsing="false" onAction="#viewRMin" prefHeight="50.0" text="Минимизация" textAlignment="CENTER" wrapText="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Line startX="-100.0" strokeWidth="2.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Line>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Button mnemonicParsing="false" prefHeight="50.0" text="Синтез R-триггера" textAlignment="CENTER" wrapText="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <VBox fx:id="vboxR"/>
+              </items>
+            </SplitPane>
+      </content>
+    </Tab>
+      <Tab text="S-триггер">
+         <content>
+            <SplitPane dividerPositions="0.1" orientation="VERTICAL" prefHeight="370.0" prefWidth="600.0">
+               <items>
+                  <HBox alignment="CENTER" prefHeight="123.0" prefWidth="598.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#viewSTrue" prefHeight="50.0" text="Таблица истинности" textAlignment="CENTER" wrapText="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Line startX="-100.0" strokeWidth="2.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Line>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Button mnemonicParsing="false" onAction="#viewSMin" prefHeight="50.0" text="Минимизация" wrapText="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Line startX="-100.0" strokeWidth="2.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Line>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Button mnemonicParsing="false" onAction="#viewSSynt" prefHeight="50.0" text="Синтез S-триггера" textAlignment="CENTER" wrapText="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <VBox fx:id="vboxS" />
+               </items>
+            </SplitPane>
+         </content>
+      </Tab>
+      <Tab text="E-триггер">
+         <content>
+            <SplitPane dividerPositions="0.1" orientation="VERTICAL">
+               <items>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="50.0" text="Таблица истинности" textAlignment="CENTER" wrapText="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Line startX="-100.0" strokeWidth="2.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Line>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Button mnemonicParsing="false" onAction="#viewEMin" prefHeight="50.0" text="Минимизация" wrapText="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Line startX="-100.0" strokeWidth="2.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Line>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Button mnemonicParsing="false" prefHeight="50.0" text="Синтез E-триггера" textAlignment="CENTER" wrapText="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <VBox fx:id="vboxE" />
+               </items>
+            </SplitPane>
+         </content>
+      </Tab>
+      <Tab text="JK-триггер">
+         <content>
+            <SplitPane dividerPositions="0.1" orientation="VERTICAL">
+               <items>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#viewJKTrue" prefHeight="50.0" text="Таблица истинности" textAlignment="CENTER" wrapText="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Line startX="-100.0" strokeWidth="2.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Line>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Button mnemonicParsing="false" onAction="#viewJKMin" prefHeight="50.0" text="Минимизация" wrapText="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Line startX="-100.0" strokeWidth="2.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Line>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Button mnemonicParsing="false" onAction="#viewJKSynt" prefHeight="50.0" text="Синтез JK-триггера" textAlignment="CENTER" wrapText="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <VBox fx:id="vboxJK" />
+               </items>
+            </SplitPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
