@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="206.0" prefWidth="354.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.diit.controllers.TestSControl">
+    <children>
+        <Label layoutX="41.0" layoutY="14.0" text="3. В каких режимах работает триггер:">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Button layoutX="290.0" layoutY="164.0" mnemonicParsing="false" onAction="#goTo4" text="Далее" />
+        <RadioButton layoutX="72.0" layoutY="42.0" mnemonicParsing="false" text="Установка «0»" />
+        <RadioButton fx:id="rb1True3" layoutX="72.0" layoutY="69.0" mnemonicParsing="false" text="Сброс" />
+        <RadioButton fx:id="rb2True3" layoutX="72.0" layoutY="96.0" mnemonicParsing="false" text="Хранение" />
+        <RadioButton layoutX="72.0" layoutY="121.0" mnemonicParsing="false" text="Суммирование" />
+      <RadioButton fx:id="rb3True3" layoutX="72.0" layoutY="147.0" mnemonicParsing="false" text="Установка «1»" />
+    </children>
+</Pane>

@@ -121,14 +121,17 @@ public class EduControl {
     private Group dogTrue2;
     private Group dogSynt1;
     private Group dogSynt2;
+    private Group dogSynt3;
     private Timeline tlMin1;
     private Timeline tlMin2;
     private Timeline tlTrue1;
     private Timeline tlTrue2;
     private Timeline tlSynt1;
     private Timeline tlSynt2;
+    private Timeline tlSynt3;
     private Label lbl1 = new Label("Шаг 1");
     private Label lbl2 = new Label("Шаг 2");
+    private Label lbl3 = new Label("Шаг 3");
 
     @FXML
     public void initialize(){
@@ -453,7 +456,7 @@ public class EduControl {
         dogSynt2.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                viewSSynt();
+                next2SSynt();
             }
         });
         tlSynt2 = new Timeline(
@@ -476,6 +479,51 @@ public class EduControl {
                     }
                 }));
         tlSynt2.setCycleCount(1);
+    }
+
+    private void next2SSynt(){
+        clearSBox();
+        if (dogSynt3 == null){
+            createDog3Synt();
+        }
+        vboxS.getChildren().addAll(lbl3, dogSynt3);
+        tlSynt3.play();
+    }
+
+    private void createDog3Synt() {
+        dogSynt3 = new Group(imgViewSSynt11);
+        dogSynt3.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                viewSSynt();
+            }
+        });
+        tlSynt3 = new Timeline(
+                new KeyFrame(Duration.millis(2000), new EventHandler<ActionEvent>(){
+                    @Override
+                    public void handle(ActionEvent t) {
+                        dogSynt3.getChildren().setAll(imgViewSSynt11);
+                    }
+                }),
+                new KeyFrame(Duration.millis(4000), new EventHandler<ActionEvent>(){
+                    @Override
+                    public void handle(ActionEvent t) {
+                        dogSynt3.getChildren().setAll(imgViewSSynt12);
+                    }
+                }),
+                new KeyFrame(Duration.millis(6000), new EventHandler<ActionEvent>(){
+                    @Override
+                    public void handle(ActionEvent t) {
+                        dogSynt3.getChildren().setAll(imgViewSSynt13);
+                    }
+                }),
+                new KeyFrame(Duration.millis(8000), new EventHandler<ActionEvent>(){
+                    @Override
+                    public void handle(ActionEvent t) {
+                        dogSynt3.getChildren().setAll(imgViewSSynt14);
+                    }
+                }));
+        tlSynt3.setCycleCount(1);
     }
 
 

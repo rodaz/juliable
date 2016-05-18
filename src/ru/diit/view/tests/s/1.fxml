@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="169.0" prefWidth="354.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.diit.controllers.TestSControl">
+   <children>
+      <Label layoutX="14.0" layoutY="59.0" text="Триггер, как" />
+      <TextField fx:id="fldAns1" layoutX="90.0" layoutY="55.0" />
+      <Label layoutX="76.0" layoutY="98.0" text="функцию: Qt = f (R,S,Qt-1)." />
+      <Label layoutX="41.0" layoutY="14.0" text="1. Вставьте нужную фразу:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="288.0" layoutY="130.0" mnemonicParsing="false" onAction="#goTo2" text="Далее" />
+      <Label layoutX="251.0" layoutY="59.0" text="реализует" />
+   </children>
+</Pane>

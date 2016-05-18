@@ -16,7 +16,7 @@
             <Font size="17.0" />
          </font>
       </Button>
-      <Button focusTraversable="false" layoutX="220.0" layoutY="96.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="134.0" text="Тестирование">
+      <Button focusTraversable="false" layoutX="220.0" layoutY="96.0" mnemonicParsing="false" onAction="#goToTesting" prefHeight="66.0" prefWidth="134.0" text="Тестирование">
          <font>
             <Font size="17.0" />
          </font>

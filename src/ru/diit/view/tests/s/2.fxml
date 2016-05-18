@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="206.0" prefWidth="354.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.diit.controllers.TestSControl">
+    <children>
+        <Label layoutX="41.0" layoutY="14.0" text="2. Количество логических наборов для таблицы&#10; истинности, равно:">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Button layoutX="290.0" layoutY="164.0" mnemonicParsing="false" onAction="#goTo3" text="Далее" />
+      <RadioButton fx:id="rb1True2" layoutX="77.0" layoutY="68.0" mnemonicParsing="false" text="8" />
+      <RadioButton fx:id="rb2True2" layoutX="77.0" layoutY="95.0" mnemonicParsing="false" text="2^3" />
+      <RadioButton layoutX="77.0" layoutY="122.0" mnemonicParsing="false" text="4" />
+      <RadioButton layoutX="77.0" layoutY="147.0" mnemonicParsing="false" text="2^2" />
+    </children>
+</Pane>
