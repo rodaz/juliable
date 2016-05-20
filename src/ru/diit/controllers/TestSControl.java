@@ -28,8 +28,11 @@ public class TestSControl {
     @FXML
     private RadioButton rb3True3;
 
+    private static int cnt;
 
-    private Stage testStage;
+
+    private  static Stage testStage;
+    private Stage spareStage;
 
     public void setTestStage(Stage stage){
         testStage = stage;
@@ -42,24 +45,44 @@ public class TestSControl {
 
     public void goTo2(){
         try {
-            testStage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("view/tests/s/3.fxml"))));
+            if (fldAns1.getText().equals("")) {
+                cnt++;
+            }
+            testStage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("view/tests/s/2.fxml"))));
         } catch (Exception e){e.printStackTrace();}
     }
 
     public void goTo3(){
         try {
-            testStage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("view/tests/s/2.fxml"))));
+            if (rb1True2.isArmed() && rb2True2.isArmed()){
+                cnt++;
+            }
+            testStage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("view/tests/s/3.fxml"))));
         } catch (Exception e){e.printStackTrace();}
     }
 
     public void goTo4(){
         try {
+            if (rb1True3.isArmed() && (rb2True3.isArmed() && rb3True3.isArmed())){
+                cnt++;
+            }
             testStage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("view/tests/s/2.fxml"))));
         } catch (Exception e){e.printStackTrace();}
+        System.out.println(cnt);
     }
 
     public void goTo5(){}
 
     public void goTo6(){}
+
+    public void goTo7(){}
+
+    public void goTo8(){}
+
+    public void goTo9(){}
+
+    public void goTo10(){}
+
+    public void goToFinish(){}
 
 }
