@@ -141,7 +141,7 @@ public class TestSControl {
     public void goTo5(){
         String str = fld1Ans4.getText()+fld2Ans4.getText()+fld3Ans4.getText()+fld4Ans4.getText()+
                 fld5Ans4.getText()+fld6Ans4.getText()+fld7Ans4.getText()+fld8Ans4.getText();
-        if (str.equals("00000001")){
+        if (str.equals("01001111")){
             cnt++;
         }
         try {
@@ -152,7 +152,7 @@ public class TestSControl {
     public void goTo6(){
         String str = fld1Ans5.getText()+fld2Ans5.getText()+fld3Ans5.getText()+fld4Ans5.getText()+
                 fld5Ans5.getText()+fld6Ans5.getText()+fld7Ans5.getText()+fld8Ans5.getText();
-        if (str.equals("00000001")){
+        if (str.equals("11011100")){
             cnt++;
         }
         try {
@@ -172,7 +172,7 @@ public class TestSControl {
     }
 
     public void goTo8(){
-        if (fld1Ans7.getText().equals("S") && fld2Ans7.getText().equals("R")){
+        if (fld1Ans7.getText().equals("R") && fld2Ans7.getText().equals("S")){
             cnt++;
         }
         try {
@@ -193,8 +193,8 @@ public class TestSControl {
     }
 
     public void goTo10(){
-        if (fld1Ans9.getText().equals("Lopata")&&fld2Ans9.getText().equals("Lopata")&&
-                fld3Ans9.getText().equals("Lopata")&&fld4Ans9.getText().equals("Lopata")){
+        if (fld1Ans9.getText().equals("Хранение")&&fld2Ans9.getText().equals("Сброс")&&
+                fld3Ans9.getText().equals("Установка")&&fld4Ans9.getText().equals("")){
             cnt++;
         }
         try {
