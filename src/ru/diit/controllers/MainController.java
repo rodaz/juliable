@@ -11,7 +11,7 @@ import java.io.IOException;
 public class MainController {
     private Stage stageEducation;
     private Stage stageMain;
-    private Stage stagePreTest;
+    private static Stage stagePreTest;
     private Stage stageTestS;
     private Parent rootEducation;
     private Parent rootPreTest;
@@ -62,7 +62,7 @@ public class MainController {
             TestSControl testSControl = fxmlLoader.getController();
             testSControl.setTestStage(stageTestS);
             stageTestS.show();
-            //stagePreTest.close();
+            stagePreTest.close();
         } catch (IOException e) {}
     }
 }

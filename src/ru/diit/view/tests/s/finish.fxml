@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="134.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.diit.controllers.TestSControl">
+   <children>
+      <Label fx:id="lblFinish" layoutX="44.0" layoutY="17.0" text="Тест окончен. Вы ответили&#10;правильно на ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="225.0" layoutY="95.0" mnemonicParsing="false" onAction="#goToClose" text="Закрыть" />
+   </children>
+</Pane>

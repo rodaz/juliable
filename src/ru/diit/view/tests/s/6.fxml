@@ -5,12 +5,11 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="241.0" prefWidth="347.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="241.0" prefWidth="347.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.diit.controllers.TestSControl">
    <children>
       <ImageView fitHeight="27.0" fitWidth="105.0" layoutX="69.0" layoutY="57.0">
          <image>
-            <Image url="@../../../../../../../../Pictures/61.png" />
+            <Image url="@61.png" />
          </image>
       </ImageView>
       <RadioButton fx:id="rb1True6" layoutX="47.0" layoutY="62.0" mnemonicParsing="false" />
@@ -19,14 +18,14 @@
       <Label layoutX="14.0" layoutY="14.0" text="6. Выберите правильное логическое описание функции Qt:" />
       <ImageView fitHeight="26.0" fitWidth="105.0" layoutX="70.0" layoutY="95.0">
          <image>
-            <Image url="@../../../../../../../../Pictures/62.png" />
+            <Image url="@62.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="24.0" fitWidth="105.0" layoutX="72.0" layoutY="129.0">
          <image>
-            <Image url="@../../../../../../../../Pictures/63.png" />
+            <Image url="@63.png" />
          </image>
       </ImageView>
-      <Button layoutX="281.0" layoutY="202.0" mnemonicParsing="false" text="Далее" />
+      <Button layoutX="281.0" layoutY="202.0" mnemonicParsing="false" onAction="#goTo7" text="Далее" />
    </children>
 </Pane>

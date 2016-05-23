@@ -6,11 +6,11 @@
 <?import javafx.scene.layout.*?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="412.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="412.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.diit.controllers.TestSControl">
    <children>
       <ImageView fitHeight="270.0" fitWidth="211.0" layoutX="26.0" layoutY="144.0">
          <image>
-            <Image url="@../../../../../../../../Pictures/10ask.jpg" />
+            <Image url="@10ask.jpg" />
          </image>
       </ImageView>
       <Button layoutX="346.0" layoutY="397.0" mnemonicParsing="false" onAction="#goToFinish" text="Далее" />
