@@ -18,5 +18,6 @@
         <RadioButton fx:id="rb2True3" layoutX="72.0" layoutY="96.0" mnemonicParsing="false" text="Хранение" />
         <RadioButton layoutX="72.0" layoutY="121.0" mnemonicParsing="false" text="Суммирование" />
       <RadioButton fx:id="rb3True3" layoutX="72.0" layoutY="147.0" mnemonicParsing="false" text="Установка «1»" />
+      <Button layoutX="240.0" layoutY="164.0" mnemonicParsing="false" onAction="#backTo2" text="Назад" />
     </children>
 </Pane>

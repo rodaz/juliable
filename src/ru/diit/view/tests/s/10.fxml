@@ -5,7 +5,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="412.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.diit.controllers.TestSControl">
    <children>
       <ImageView fitHeight="270.0" fitWidth="211.0" layoutX="26.0" layoutY="144.0">
@@ -18,5 +17,6 @@
       <RadioButton fx:id="rb1True10" layoutX="26.0" layoutY="47.0" mnemonicParsing="false" text="Классический асинхронный RS – триггер с инверсными входами" />
       <RadioButton fx:id="rb2True10" layoutX="26.0" layoutY="78.0" mnemonicParsing="false" text="Классический синхронный RS – триггер с прямыми входами" />
       <RadioButton fx:id="rb3True10" layoutX="26.0" layoutY="110.0" mnemonicParsing="false" text="Классический асинхронный RS – триггер с прямыми входами " />
+      <Button layoutX="296.0" layoutY="397.0" mnemonicParsing="false" onAction="#backTo9" text="Назад" />
    </children>
 </Pane>

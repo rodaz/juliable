@@ -5,7 +5,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="372.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.diit.controllers.TestSControl">
    <children>
       <Label layoutX="14.0" layoutY="14.0" text="5. Заполните карту Карно:" />
@@ -23,5 +22,6 @@
       <TextField fx:id="fld6Ans5" layoutX="168.0" layoutY="217.0" prefHeight="36.0" prefWidth="49.0" />
       <TextField fx:id="fld7Ans5" layoutX="238.0" layoutY="217.0" prefHeight="36.0" prefWidth="49.0" />
       <TextField fx:id="fld8Ans5" layoutX="310.0" layoutY="217.0" prefHeight="36.0" prefWidth="49.0" />
+      <Button layoutX="285.0" layoutY="333.0" mnemonicParsing="false" onAction="#backTo4" text="Назад" />
    </children>
 </Pane>

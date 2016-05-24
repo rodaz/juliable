@@ -22,5 +22,6 @@
       <TextField fx:id="fld7Ans4" layoutX="188.0" layoutY="310.0" prefHeight="25.0" prefWidth="43.0" />
       <TextField fx:id="fld8Ans4" layoutX="188.0" layoutY="347.0" prefHeight="25.0" prefWidth="43.0" />
       <Button layoutX="334.0" layoutY="360.0" mnemonicParsing="false" onAction="#goTo5" text="Далее" />
+      <Button layoutX="284.0" layoutY="360.0" mnemonicParsing="false" onAction="#backTo3" text="Назад" />
    </children>
 </Pane>

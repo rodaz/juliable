@@ -5,7 +5,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="362.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.diit.controllers.TestSControl">
    <children>
       <ImageView fitHeight="201.0" fitWidth="265.0" layoutX="45.0" layoutY="69.0">
@@ -19,5 +18,6 @@
       <TextField fx:id="fld2Ans9" layoutX="181.0" layoutY="157.0" prefHeight="25.0" prefWidth="126.0" />
       <TextField fx:id="fld3Ans9" layoutX="181.0" layoutY="196.0" prefHeight="25.0" prefWidth="126.0" />
       <TextField fx:id="fld4Ans9" layoutX="181.0" layoutY="237.0" prefHeight="25.0" prefWidth="126.0" />
+      <Button layoutX="246.0" layoutY="281.0" mnemonicParsing="false" onAction="#backTo8" text="Назад" />
    </children>
 </Pane>

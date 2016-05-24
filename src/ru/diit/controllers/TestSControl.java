@@ -109,33 +109,87 @@ public class TestSControl {
     public void initialize(){
 
     }
-
-    public void goTo2(){
+    public void backTo1(){
+        if (rb1True2.isSelected() && rb2True2.isSelected()){
+            cnt--;
+        }
         try {
-            if (fldAns1.getText().equals("комбинационная схема")) {
-                cnt++;
-            }
-            testStage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("view/tests/s/2.fxml"))));
+            testStage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("view/tests/s/1.fxml"))));
         } catch (Exception e){e.printStackTrace();}
+    }
+    public void backTo2(){
+        if (rb1True3.isSelected() && (rb2True3.isSelected() && rb3True3.isSelected())){
+            cnt--;
+        }
+        goTo(2);
+    }
+    public void backTo3(){
+        String str = fld1Ans4.getText()+fld2Ans4.getText()+fld3Ans4.getText()+fld4Ans4.getText()+
+                fld5Ans4.getText()+fld6Ans4.getText()+fld7Ans4.getText()+fld8Ans4.getText();
+        if (str.equals("01001111")){
+            cnt--;
+        }
+        goTo(3);
+    }
+    public void backTo4(){
+        String str = fld1Ans5.getText()+fld2Ans5.getText()+fld3Ans5.getText()+fld4Ans5.getText()+
+                fld5Ans5.getText()+fld6Ans5.getText()+fld7Ans5.getText()+fld8Ans5.getText();
+        if (str.equals("11011100")){
+            cnt--;
+        }
+        goTo(4);
+    }
+    public void backTo5(){
+        if (rb2True6.isSelected()){
+            cnt--;
+        }
+        goTo(5);
+    }
+    public void backTo6(){
+        if (fld1Ans7.getText().equals("R") && fld2Ans7.getText().equals("S")){
+            cnt--;
+        }
+        goTo(6);
+    }
+    public void backTo7(){
+        String str = fld1Ans8.getText()+fld2Ans8.getText()+fld3Ans8.getText()+fld4Ans8.getText();
+        if (str.equals("SRQQ")){
+            cnt--;
+        }
+        goTo(7);
+    }
+    public void backTo8(){
+        if (fld1Ans9.getText().equals("Хранение")&&fld2Ans9.getText().equals("Сброс")&&
+                fld3Ans9.getText().equals("Установка")&&fld4Ans9.getText().equals("")){
+            cnt--;
+        }
+        goTo(8);
+    }
+    public void backTo9(){
+        if (rb3True10.isSelected()){
+            cnt++;
+        }
+        goTo(9);
+    }
+    public void goTo2(){
+        if (fldAns1.getText().equals("комбинационная схема")) {
+            cnt++;
+        }
+        goTo(2);
     }
 
     public void goTo3(){
-        try {
-            if (rb1True2.isSelected() && rb2True2.isSelected()){
-                cnt++;
-            }
-            testStage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("view/tests/s/3.fxml"))));
-        } catch (Exception e){e.printStackTrace();}
+        if (rb1True2.isSelected() && rb2True2.isSelected()){
+            cnt++;
+        }
+        goTo(3);
     }
 
     public void goTo4(){
-        try {
-            if (rb1True3.isSelected() && (rb2True3.isSelected() && rb3True3.isSelected())){
-                cnt++;
-            }
-            testStage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("view/tests/s/4.fxml"))));
-        } catch (Exception e){e.printStackTrace();}
-        System.out.println(cnt);
+        if (rb1True3.isSelected() && (rb2True3.isSelected() && rb3True3.isSelected())){
+            cnt++;
+        }
+        goTo(4);
     }
 
     public void goTo5(){
@@ -144,9 +198,7 @@ public class TestSControl {
         if (str.equals("01001111")){
             cnt++;
         }
-        try {
-            testStage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("view/tests/s/5.fxml"))));
-        } catch (Exception e){e.printStackTrace();}
+        goTo(5);
     }
 
     public void goTo6(){
@@ -155,30 +207,21 @@ public class TestSControl {
         if (str.equals("11011100")){
             cnt++;
         }
-        try {
-
-            testStage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("view/tests/s/6.fxml"))));
-        } catch (Exception e){e.printStackTrace();}
+        goTo(6);
     }
 
     public void goTo7(){
         if (rb2True6.isSelected()){
             cnt++;
         }
-        try {
-
-            testStage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("view/tests/s/7.fxml"))));
-        } catch (Exception e){e.printStackTrace();}
+        goTo(7);
     }
 
     public void goTo8(){
         if (fld1Ans7.getText().equals("R") && fld2Ans7.getText().equals("S")){
             cnt++;
         }
-        try {
-
-            testStage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("view/tests/s/8.fxml"))));
-        } catch (Exception e){e.printStackTrace();}
+        goTo(8);
     }
 
     public void goTo9(){
@@ -186,10 +229,7 @@ public class TestSControl {
         if (str.equals("SRQQ")){
             cnt++;
         }
-        try {
-
-            testStage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("view/tests/s/9.fxml"))));
-        } catch (Exception e){e.printStackTrace();}
+        goTo(9);
     }
 
     public void goTo10(){
@@ -197,8 +237,12 @@ public class TestSControl {
                 fld3Ans9.getText().equals("Установка")&&fld4Ans9.getText().equals("")){
             cnt++;
         }
+        goTo(10);
+    }
+
+    private void goTo(int value) {
         try {
-            testStage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("view/tests/s/10.fxml"))));
+            testStage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("view/tests/s/"+value+".fxml"))));
         } catch (Exception e){e.printStackTrace();}
     }
 
