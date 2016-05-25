@@ -15,8 +15,8 @@
         <Button layoutX="290.0" layoutY="164.0" mnemonicParsing="false" onAction="#goTo3" text="Далее" />
       <RadioButton fx:id="rb1True2" layoutX="77.0" layoutY="68.0" mnemonicParsing="false" text="8" />
       <RadioButton fx:id="rb2True2" layoutX="77.0" layoutY="95.0" mnemonicParsing="false" text="2^3" />
-      <RadioButton layoutX="77.0" layoutY="122.0" mnemonicParsing="false" text="4" />
-      <RadioButton layoutX="77.0" layoutY="147.0" mnemonicParsing="false" text="2^2" />
-      <Button layoutX="240.0" layoutY="164.0" mnemonicParsing="false" onAction="#backTo1" text="Назад" />
+      <RadioButton fx:id="rb3True2" layoutX="77.0" layoutY="122.0" mnemonicParsing="false" text="4" />
+      <RadioButton fx:id="rb4True2" layoutX="77.0" layoutY="147.0" mnemonicParsing="false" text="2^2" />
+      <!--<Button layoutX="240.0" layoutY="164.0" mnemonicParsing="false" onAction="#backTo1" text="Назад" />-->
     </children>
 </Pane>

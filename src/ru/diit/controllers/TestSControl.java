@@ -1,6 +1,8 @@
 package ru.diit.controllers;
 
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -9,6 +11,11 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import ru.diit.Main;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Objects;
 
 /**
  * Created by oit on 18.05.2016.
@@ -74,11 +81,19 @@ public class TestSControl {
     @FXML
     private RadioButton rb2True2;
     @FXML
+    private RadioButton rb3True2;
+    @FXML
+    private RadioButton rb4True2;
+    @FXML
     private RadioButton rb1True3;
     @FXML
     private RadioButton rb2True3;
     @FXML
     private RadioButton rb3True3;
+    @FXML
+    private RadioButton rb4True3;
+    @FXML
+    private RadioButton rb5True3;
     @FXML
     private RadioButton rb1True6;
     @FXML
@@ -97,9 +112,22 @@ public class TestSControl {
 
     private static int cnt;
 
+    private Scene scene1;
+    private Scene scene2;
+    private Scene scene3;
+    private Scene scene4;
+    private Scene scene5;
+    private Scene scene6;
+    private Scene scene7;
+    private Scene scene8;
+    private Scene scene9;
+    private Scene scene10;
+    private Scene scene11;
+    private ArrayList<Scene> scenes = new ArrayList<>();
 
     private  static Stage testStage;
     private Stage spareStage;
+    Alert alertEr;
 
     public void setTestStage(Stage stage){
         testStage = stage;
@@ -107,15 +135,27 @@ public class TestSControl {
 
     @FXML
     public void initialize(){
+        scenes.add(scene1);
+        scenes.add(scene2);
+        scenes.add(scene3);
+        scenes.add(scene4);
+        scenes.add(scene5);
+        scenes.add(scene6);
+        scenes.add(scene7);
+        scenes.add(scene8);
+        scenes.add(scene9);
+        scenes.add(scene10);
+        scenes.add(scene11);
+        alertEr = new Alert(Alert.AlertType.ERROR, "Ошибка пользовательского ввода", ButtonType.OK);
+        alertEr.setTitle("Ошибка");
+        alertEr.setHeaderText(null);
 
     }
     public void backTo1(){
         if (rb1True2.isSelected() && rb2True2.isSelected()){
             cnt--;
         }
-        try {
-            testStage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("view/tests/s/1.fxml"))));
-        } catch (Exception e){e.printStackTrace();}
+        goTo(1);
     }
     public void backTo2(){
         if (rb1True3.isSelected() && (rb2True3.isSelected() && rb3True3.isSelected())){
@@ -175,21 +215,34 @@ public class TestSControl {
         if (fldAns1.getText().equals("комбинационная схема")) {
             cnt++;
         }
-        goTo(2);
+        if (!Objects.equals(fldAns1.getText(), "")) {
+            goTo(2);
+        } else{
+            alertEr.show();
+        }
     }
 
     public void goTo3(){
         if (rb1True2.isSelected() && rb2True2.isSelected()){
             cnt++;
         }
-        goTo(3);
+        if (rb1True2.isSelected() || rb2True2.isSelected()||rb3True2.isSelected()||rb4True2.isSelected()) {
+            goTo(3);
+        } else{
+            alertEr.show();
+        }
     }
 
     public void goTo4(){
         if (rb1True3.isSelected() && (rb2True3.isSelected() && rb3True3.isSelected())){
             cnt++;
         }
-        goTo(4);
+        if (rb1True3.isSelected() || rb2True3.isSelected() || rb3True3.isSelected()||
+            rb4True3.isSelected()||rb5True3.isSelected()) {
+            goTo(4);
+        } else{
+            alertEr.show();
+        }
     }
 
     public void goTo5(){
@@ -198,7 +251,11 @@ public class TestSControl {
         if (str.equals("01001111")){
             cnt++;
         }
-        goTo(5);
+        if (str.length() == 8) {
+            goTo(5);
+        } else{
+            alertEr.show();
+        }
     }
 
     public void goTo6(){
@@ -207,21 +264,33 @@ public class TestSControl {
         if (str.equals("11011100")){
             cnt++;
         }
-        goTo(6);
+        if (str.length() == 8) {
+            goTo(6);
+        } else{
+            alertEr.show();
+        }
     }
 
     public void goTo7(){
         if (rb2True6.isSelected()){
             cnt++;
         }
-        goTo(7);
+        if (rb1True6.isSelected()||rb2True6.isSelected()||rb3True6.isSelected()) {
+            goTo(7);
+        } else{
+            alertEr.show();
+        }
     }
 
     public void goTo8(){
         if (fld1Ans7.getText().equals("R") && fld2Ans7.getText().equals("S")){
             cnt++;
         }
-        goTo(8);
+        if (!fld1Ans7.getText().equals("") && !fld2Ans7.getText().equals("")) {
+            goTo(8);
+        } else{
+            alertEr.show();
+        }
     }
 
     public void goTo9(){
@@ -229,7 +298,11 @@ public class TestSControl {
         if (str.equals("SRQQ")){
             cnt++;
         }
-        goTo(9);
+        if (str.length() == 4) {
+            goTo(9);
+        } else{
+            alertEr.show();
+        }
     }
 
     public void goTo10(){
@@ -237,12 +310,21 @@ public class TestSControl {
                 fld3Ans9.getText().equals("Установка")&&fld4Ans9.getText().equals("")){
             cnt++;
         }
-        goTo(10);
+        if (!fld1Ans9.getText().equals("")&&!fld2Ans9.getText().equals("")&&
+                !fld3Ans9.getText().equals("")) {
+            goTo(10);
+        } else{
+            alertEr.show();
+        }
     }
 
     private void goTo(int value) {
+
         try {
-            testStage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("view/tests/s/"+value+".fxml"))));
+            if (scenes.get(value)==null) {
+                scenes.add(value, new Scene(FXMLLoader.load(Main.class.getResource("view/tests/s/" + value + ".fxml"))));
+            }
+            testStage.setScene(scenes.get(value));
         } catch (Exception e){e.printStackTrace();}
     }
 
@@ -254,8 +336,12 @@ public class TestSControl {
                 cnt+"/10", ButtonType.OK);
         alert.setTitle("Результаты");
         alert.setHeaderText(null);
-        alert.show();
-        testStage.close();
+        if (rb1True10.isSelected()||rb2True10.isSelected()||rb3True10.isSelected()) {
+            alert.show();
+            testStage.close();
+        } else{
+            alertEr.show();
+        }
 
     }
 
@@ -263,4 +349,27 @@ public class TestSControl {
         testStage.close();
     }
 
+
+    public void filter4Ans(Event event) {
+        String str;
+        TextField txt = (TextField)event.getTarget();
+        str = txt.getText();
+        if (str.length() <= 1){
+            if (str.equals("1")||str.equals("0")){
+                return;
+            }
+        }
+        txt.setText("");
+    }
+
+    public void filter7Ans(Event event){
+        TextField input = (TextField)event.getTarget();
+        String str = input.getText();
+        if (str.length() <= 1){
+            if (str.equals("S")||str.equals("R")||str.equals("Q")){
+                return;
+            }
+        }
+        input.setText("");
+    }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -13,15 +14,39 @@
             <Image url="@5ask.jpg" />
          </image>
       </ImageView>
+      <TextField fx:id="fld1Ans5" alignment="CENTER" layoutX="97.0" layoutY="145.0" onKeyReleased="#filter4Ans" prefHeight="36.0" prefWidth="49.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></TextField>
+      <TextField fx:id="fld2Ans5" alignment="CENTER" layoutX="168.0" layoutY="145.0" onKeyReleased="#filter4Ans" prefHeight="36.0" prefWidth="49.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></TextField>
+      <TextField fx:id="fld3Ans5" alignment="CENTER" layoutX="238.0" layoutY="145.0" onKeyReleased="#filter4Ans" prefHeight="36.0" prefWidth="49.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></TextField>
+      <TextField fx:id="fld4Ans5" alignment="CENTER" layoutX="310.0" layoutY="145.0" onKeyReleased="#filter4Ans" prefHeight="36.0" prefWidth="49.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></TextField>
+      <TextField fx:id="fld5Ans5" alignment="CENTER" layoutX="97.0" layoutY="217.0" onKeyReleased="#filter4Ans" prefHeight="36.0" prefWidth="49.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></TextField>
+      <TextField fx:id="fld6Ans5" alignment="CENTER" layoutX="168.0" layoutY="217.0" onKeyReleased="#filter4Ans" prefHeight="36.0" prefWidth="49.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></TextField>
+      <TextField fx:id="fld7Ans5" alignment="CENTER" layoutX="238.0" layoutY="217.0" onKeyReleased="#filter4Ans" prefHeight="36.0" prefWidth="49.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></TextField>
+      <TextField fx:id="fld8Ans5" alignment="CENTER" layoutX="310.0" layoutY="217.0" onKeyReleased="#filter4Ans" prefHeight="36.0" prefWidth="49.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></TextField>
       <Button layoutX="334.0" layoutY="333.0" mnemonicParsing="false" onAction="#goTo6" text="Далее" />
-      <TextField fx:id="fld1Ans5" layoutX="97.0" layoutY="145.0" prefHeight="36.0" prefWidth="49.0" />
-      <TextField fx:id="fld2Ans5" layoutX="168.0" layoutY="145.0" prefHeight="36.0" prefWidth="49.0" />
-      <TextField fx:id="fld5Ans5" layoutX="97.0" layoutY="217.0" prefHeight="36.0" prefWidth="49.0" />
-      <TextField fx:id="fld3Ans5" layoutX="238.0" layoutY="145.0" prefHeight="36.0" prefWidth="49.0" />
-      <TextField fx:id="fld4Ans5" layoutX="310.0" layoutY="145.0" prefHeight="36.0" prefWidth="49.0" />
-      <TextField fx:id="fld6Ans5" layoutX="168.0" layoutY="217.0" prefHeight="36.0" prefWidth="49.0" />
-      <TextField fx:id="fld7Ans5" layoutX="238.0" layoutY="217.0" prefHeight="36.0" prefWidth="49.0" />
-      <TextField fx:id="fld8Ans5" layoutX="310.0" layoutY="217.0" prefHeight="36.0" prefWidth="49.0" />
-      <Button layoutX="285.0" layoutY="333.0" mnemonicParsing="false" onAction="#backTo4" text="Назад" />
+      <!--<Button layoutX="283.0" layoutY="333.0" mnemonicParsing="false" onAction="#backTo4" text="Назад" />-->
    </children>
 </Pane>

@@ -13,11 +13,12 @@
             <Image url="@8ask.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="334.0" layoutY="361.0" mnemonicParsing="false" onAction="#goTo9" text="Далее" />
+      <!--<Button layoutX="284.0" layoutY="361.0" mnemonicParsing="false" onAction="#backTo7" text="Назад" />-->
       <Label layoutX="14.0" layoutY="14.0" text="8. Сделайте полным УгО схемы триггера на элементах «2И-НЕ»:" />
-      <TextField fx:id="fld1Ans8" layoutX="115.0" layoutY="117.0" prefHeight="25.0" prefWidth="32.0" />
-      <TextField fx:id="fld3Ans8" layoutX="285.0" layoutY="98.0" prefHeight="25.0" prefWidth="32.0" />
-      <TextField fx:id="fld2Ans8" layoutX="115.0" layoutY="239.0" prefHeight="25.0" prefWidth="32.0" />
-      <TextField fx:id="fld4Ans8" layoutX="285.0" layoutY="227.0" prefHeight="25.0" prefWidth="32.0" />
+      <TextField fx:id="fld1Ans8" alignment="CENTER" layoutX="115.0" layoutY="117.0" onKeyReleased="#filter7Ans" prefHeight="25.0" prefWidth="32.0" />
+      <TextField fx:id="fld3Ans8" alignment="CENTER" layoutX="285.0" layoutY="98.0" onKeyReleased="#filter7Ans" prefHeight="25.0" prefWidth="32.0" />
+      <TextField fx:id="fld2Ans8" alignment="CENTER" layoutX="115.0" layoutY="239.0" onKeyReleased="#filter7Ans" prefHeight="25.0" prefWidth="32.0" />
+      <TextField fx:id="fld4Ans8" alignment="CENTER" layoutX="285.0" layoutY="227.0" onKeyReleased="#filter7Ans" prefHeight="25.0" prefWidth="32.0" />
+      <Button layoutX="334.0" layoutY="361.0" mnemonicParsing="false" onAction="#goTo9" text="Далее" />
    </children>
 </Pane>

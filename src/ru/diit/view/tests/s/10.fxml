@@ -17,6 +17,6 @@
       <RadioButton fx:id="rb1True10" layoutX="26.0" layoutY="47.0" mnemonicParsing="false" text="Классический асинхронный RS – триггер с инверсными входами" />
       <RadioButton fx:id="rb2True10" layoutX="26.0" layoutY="78.0" mnemonicParsing="false" text="Классический синхронный RS – триггер с прямыми входами" />
       <RadioButton fx:id="rb3True10" layoutX="26.0" layoutY="110.0" mnemonicParsing="false" text="Классический асинхронный RS – триггер с прямыми входами " />
-      <Button layoutX="296.0" layoutY="397.0" mnemonicParsing="false" onAction="#backTo9" text="Назад" />
+      <!--<Button layoutX="296.0" layoutY="397.0" mnemonicParsing="false" onAction="#backTo9" text="Назад" />-->
    </children>
 </Pane>

@@ -18,19 +18,30 @@ public class MainController {
     private Parent rootTestS;
 
 
-
+    public void setStagePreTest(Stage stage){this.stagePreTest = stage;}
     public void setStageMain(Stage stage){
         this.stageMain = stage;
     }
 
     public void goToEducation(){
         try {
-            rootEducation = FXMLLoader.load(Main.class.getResource("view/education.fxml"));
+//            rootEducation = FXMLLoader.load(Main.class.getResource("view/education.fxml"));
+//            stageEducation = new Stage();
+//            stageEducation.setTitle("Education");
+//            stageEducation.setResizable(false);
+//            stageEducation.setScene(new Scene(rootEducation, 700, 829));
+//            //stageEducation.getScene().getStylesheets().add("ru/diit/view/styles.css");
+//            stageEducation.show();
+//            stageMain.close();
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(Main.class.getResource("view/education.fxml"));
+            rootEducation = fxmlLoader.load();
             stageEducation = new Stage();
-            stageEducation.setTitle("Education");
+            stageEducation.setTitle("Обучение");
             stageEducation.setResizable(false);
             stageEducation.setScene(new Scene(rootEducation, 700, 829));
-            //stageEducation.getScene().getStylesheets().add("ru/diit/view/styles.css");
+            EduControl eduControl = fxmlLoader.getController();
+            eduControl.setStageMain(stageEducation);
             stageEducation.show();
             stageMain.close();
         } catch (IOException e) {}

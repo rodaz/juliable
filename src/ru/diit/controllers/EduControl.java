@@ -6,15 +6,20 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import javafx.util.Duration;
+import ru.diit.Main;
 
 
 /**
@@ -132,6 +137,8 @@ public class EduControl {
     private Label lbl1 = new Label("Шаг 1");
     private Label lbl2 = new Label("Шаг 2");
     private Label lbl3 = new Label("Шаг 3");
+    private Stage stageMain;
+    private Stage testStage;
 
     @FXML
     public void initialize(){
@@ -546,5 +553,25 @@ public class EduControl {
 
     public void viewJKSynt(){
 
+    }
+    public void goToTesting(){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(Main.class.getResource("view/preTesting.fxml"));
+            Parent rootTest = fxmlLoader.load();
+            testStage = new Stage();
+            testStage.setTitle("Тестирование");
+            testStage.setResizable(false);
+            testStage.setScene(new Scene(rootTest, 300, 200));
+            MainController mainController = fxmlLoader.getController();
+            mainController.setStagePreTest(testStage);
+            testStage.show();
+            stageMain.close();
+        } catch (Exception e){e.printStackTrace();}
+
+    }
+
+    public void setStageMain(Stage stageMain) {
+        this.stageMain = stageMain;
     }
 }

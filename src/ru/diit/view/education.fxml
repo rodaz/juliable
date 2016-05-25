@@ -72,7 +72,7 @@
                         </Button>
                      </children>
                   </HBox>
-                  <VBox fx:id="vboxR"/>
+                  <VBox fx:id="vboxR" />
               </items>
             </SplitPane>
       </content>
@@ -265,6 +265,11 @@
                </items>
             </SplitPane>
          </content>
+      </Tab>
+      <Tab onSelectionChanged="#goToTesting" text="Тестирование">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
       </Tab>
   </tabs>
 </TabPane>

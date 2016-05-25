@@ -18,6 +18,6 @@
       <TextField fx:id="fld2Ans9" layoutX="181.0" layoutY="157.0" prefHeight="25.0" prefWidth="126.0" />
       <TextField fx:id="fld3Ans9" layoutX="181.0" layoutY="196.0" prefHeight="25.0" prefWidth="126.0" />
       <TextField fx:id="fld4Ans9" layoutX="181.0" layoutY="237.0" prefHeight="25.0" prefWidth="126.0" />
-      <Button layoutX="246.0" layoutY="281.0" mnemonicParsing="false" onAction="#backTo8" text="Назад" />
+      <!--<Button layoutX="246.0" layoutY="281.0" mnemonicParsing="false" onAction="#backTo8" text="Назад" />-->
    </children>
 </Pane>
