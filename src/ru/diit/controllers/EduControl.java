@@ -80,6 +80,17 @@ public class EduControl {
     private Image imgSSynt12 = new Image("file:resources/images/s/synt12.jpg");
     private Image imgSSynt13 = new Image("file:resources/images/s/synt13.jpg");
     private Image imgSSynt14 = new Image("file:resources/images/s/synt14.jpg");
+    private Image imgSSynt15 = new Image("file:resources/images/s/synt15.jpg");
+    private Image imgSSynt16 = new Image("file:resources/images/s/synt16.jpg");
+    private Image imgSSynt17 = new Image("file:resources/images/s/synt17.jpg");
+    private Image imgSSynt18 = new Image("file:resources/images/s/synt18.jpg");
+    private Image imgSSynt19 = new Image("file:resources/images/s/synt19.jpg");
+    private Image imgSSynt20 = new Image("file:resources/images/s/synt20.jpg");
+    private Image imgSSynt21 = new Image("file:resources/images/s/synt21.jpg");
+    private Image imgSSynt22 = new Image("file:resources/images/s/synt22.jpg");
+    private Image imgSSynt23 = new Image("file:resources/images/s/synt23.jpg");
+    private Image imgSSynt24 = new Image("file:resources/images/s/synt24.jpg");
+    private Image imgSSynt25 = new Image("file:resources/images/s/synt25.jpg");
 
 
     private ImageView imgViewSTrue1 = new ImageView(imgSTrue1);
@@ -119,6 +130,17 @@ public class EduControl {
     private ImageView imgViewSSynt12 = new ImageView(imgSSynt12);
     private ImageView imgViewSSynt13 = new ImageView(imgSSynt13);
     private ImageView imgViewSSynt14 = new ImageView(imgSSynt14);
+    private ImageView imgViewSSynt15 = new ImageView(imgSSynt15);
+    private ImageView imgViewSSynt16 = new ImageView(imgSSynt16);
+    private ImageView imgViewSSynt17 = new ImageView(imgSSynt17);
+    private ImageView imgViewSSynt18 = new ImageView(imgSSynt18);
+    private ImageView imgViewSSynt19 = new ImageView(imgSSynt19);
+    private ImageView imgViewSSynt20 = new ImageView(imgSSynt20);
+    private ImageView imgViewSSynt21 = new ImageView(imgSSynt21);
+    private ImageView imgViewSSynt22 = new ImageView(imgSSynt22);
+    private ImageView imgViewSSynt23 = new ImageView(imgSSynt23);
+    private ImageView imgViewSSynt24 = new ImageView(imgSSynt24);
+    private ImageView imgViewSSynt25 = new ImageView(imgSSynt25);
 
     private Group dogMin1;
     private Group dogMin2;
@@ -127,6 +149,9 @@ public class EduControl {
     private Group dogSynt1;
     private Group dogSynt2;
     private Group dogSynt3;
+    private Group dogSynt4;
+    private Group dogSynt5;
+    private Group dogSynt6;
     private Timeline tlMin1;
     private Timeline tlMin2;
     private Timeline tlTrue1;
@@ -134,9 +159,15 @@ public class EduControl {
     private Timeline tlSynt1;
     private Timeline tlSynt2;
     private Timeline tlSynt3;
+    private Timeline tlSynt4;
+    private Timeline tlSynt5;
+    private Timeline tlSynt6;
     private Label lbl1 = new Label("Шаг 1");
     private Label lbl2 = new Label("Шаг 2");
     private Label lbl3 = new Label("Шаг 3");
+    private Label lbl4 = new Label("Шаг 4");
+    private Label lbl5 = new Label("Шаг 5");
+    private Label lbl6 = new Label("Шаг 6");
     private Stage stageMain;
     private Stage testStage;
 
@@ -226,7 +257,7 @@ public class EduControl {
 
     private void createDog2True() {
         dogTrue2 = new Group(imgViewSTrue6);
-        dogTrue1.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        dogTrue2.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
                 viewSTrue();
@@ -502,7 +533,7 @@ public class EduControl {
         dogSynt3.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                viewSSynt();
+                next3SSynt();
             }
         });
         tlSynt3 = new Timeline(
@@ -531,6 +562,114 @@ public class EduControl {
                     }
                 }));
         tlSynt3.setCycleCount(1);
+    }
+
+    private void next3SSynt(){
+        clearSBox();
+        if (dogSynt4 == null){
+            createDog4Synt();
+        }
+        vboxS.getChildren().addAll(lbl4, dogSynt4);
+        tlSynt4.play();
+    }
+
+    private void createDog4Synt() {
+        dogSynt4 = new Group(imgViewSSynt15);
+        dogSynt4.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                next4SSynt();
+            }
+        });
+        tlSynt4 = new Timeline(
+                new KeyFrame(Duration.millis(2000), new EventHandler<ActionEvent>(){
+                    @Override
+                    public void handle(ActionEvent t) {
+                        dogSynt4.getChildren().setAll(imgViewSSynt15);
+                    }
+                }),
+                new KeyFrame(Duration.millis(4000), new EventHandler<ActionEvent>(){
+                    @Override
+                    public void handle(ActionEvent t) {
+                        dogSynt4.getChildren().setAll(imgViewSSynt16);
+                    }
+                }),
+                new KeyFrame(Duration.millis(6000), new EventHandler<ActionEvent>(){
+                    @Override
+                    public void handle(ActionEvent t) {
+                        dogSynt4.getChildren().setAll(imgViewSSynt17);
+                    }
+                }),
+                new KeyFrame(Duration.millis(8000), new EventHandler<ActionEvent>(){
+                    @Override
+                    public void handle(ActionEvent t) {
+                        dogSynt4.getChildren().setAll(imgViewSSynt18);
+                    }
+                }),
+                new KeyFrame(Duration.millis(10000), new EventHandler<ActionEvent>(){
+                    @Override
+                    public void handle(ActionEvent t) {
+                        dogSynt4.getChildren().setAll(imgViewSSynt19);
+                    }
+                }),
+                new KeyFrame(Duration.millis(12000), new EventHandler<ActionEvent>(){
+                    @Override
+                    public void handle(ActionEvent t) {
+                        dogSynt4.getChildren().setAll(imgViewSSynt20);
+                    }
+                }),
+                new KeyFrame(Duration.millis(14000), new EventHandler<ActionEvent>(){
+                    @Override
+                    public void handle(ActionEvent t) {
+                        dogSynt4.getChildren().setAll(imgViewSSynt21);
+                    }
+                }),
+                new KeyFrame(Duration.millis(16000), new EventHandler<ActionEvent>(){
+                    @Override
+                    public void handle(ActionEvent t) {
+                        dogSynt4.getChildren().setAll(imgViewSSynt22);
+                    }
+                }));
+        tlSynt4.setCycleCount(1);
+    }
+
+    private void next4SSynt(){
+        clearSBox();
+        if (dogSynt5 == null){
+            createDog5Synt();
+        }
+        vboxS.getChildren().addAll(lbl5, dogSynt5);
+        tlSynt5.play();
+    }
+
+    private void createDog5Synt() {
+        dogSynt5 = new Group(imgViewSSynt23);
+        dogSynt5.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                viewSSynt();
+            }
+        });
+        tlSynt5 = new Timeline(
+                new KeyFrame(Duration.millis(2000), new EventHandler<ActionEvent>(){
+                    @Override
+                    public void handle(ActionEvent t) {
+                        dogSynt5.getChildren().setAll(imgViewSSynt23);
+                    }
+                }),
+                new KeyFrame(Duration.millis(4000), new EventHandler<ActionEvent>(){
+                    @Override
+                    public void handle(ActionEvent t) {
+                        dogSynt5.getChildren().setAll(imgViewSSynt24);
+                    }
+                }),
+                new KeyFrame(Duration.millis(6000), new EventHandler<ActionEvent>(){
+                    @Override
+                    public void handle(ActionEvent t) {
+                        dogSynt5.getChildren().setAll(imgViewSSynt25);
+                    }
+                }));
+        tlSynt5.setCycleCount(1);
     }
 
 
