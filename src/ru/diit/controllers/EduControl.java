@@ -12,11 +12,13 @@ import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import ru.diit.Main;
@@ -35,6 +37,15 @@ public class EduControl {
     private VBox vboxE;
     @FXML
     private VBox vboxJK;
+
+    @FXML
+    private Button btnMin;
+    @FXML
+    private Button btnSynt;
+    @FXML
+    private Button btnTest;
+
+    private static int src = 7;
 
 //    private Image imgJKTrue = new Image("file:resources/images/jk/tableTrue.jpg");
 //    private Image imgJKMin1 = new Image("file:resources/images/jk/min1.jpg");
@@ -172,8 +183,12 @@ public class EduControl {
     private Stage testStage;
 
     @FXML
+    private VBox vboxSrc;
+
+    @FXML
     public void initialize(){
         // Выравниваем по центру
+        vboxSrc.setAlignment(Pos.CENTER);
         vboxR.setAlignment(Pos.CENTER);
         vboxS.setAlignment(Pos.CENTER);
         vboxE.setAlignment(Pos.CENTER);
@@ -196,6 +211,7 @@ public class EduControl {
     }
 
     public void viewSTrue(){
+        src = 7;
         clearSBox();
         if (dogTrue1 == null){
             createDog1True();
@@ -298,12 +314,14 @@ public class EduControl {
                     @Override
                     public void handle(ActionEvent event) {
                         dogTrue2.getChildren().setAll(imgViewSTrue11);
+                        btnTest.setVisible(true);
                     }
                 }));
         tlTrue2.setCycleCount(1);
     }
 
     public void viewSMin(){
+        src = 8;
         clearSBox();
         if (dogMin1 == null){
             createDog1Min();
@@ -412,12 +430,14 @@ public class EduControl {
                     @Override
                     public void handle(ActionEvent event) {
                         dogMin2.getChildren().setAll(imgViewSMin12);
+                        btnTest.setVisible(true);
                     }
                 }));
         tlMin2.setCycleCount(1);
     }
 
     public void viewSSynt(){
+        src = 9;
         clearSBox();
         if (dogSynt1 == null){
             createDog1Synt();
@@ -712,5 +732,74 @@ public class EduControl {
 
     public void setStageMain(Stage stageMain) {
         this.stageMain = stageMain;
+    }
+
+    public void goToTrueTest(){
+        if (src == 7) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(Main.class.getResource("view/tests/s/1.fxml"));
+                Parent rootTest = fxmlLoader.load();
+                testStage = new Stage();
+                testStage.setTitle("Самотестирование");
+                testStage.setResizable(false);
+                testStage.setScene(new Scene(rootTest));
+                testStage.initModality(Modality.WINDOW_MODAL);
+                testStage.initOwner(stageMain);
+                TestSControl testSControl = fxmlLoader.getController();
+                testSControl.setTestStage(testStage);
+                TestSControl.src = 32;
+                TestSControl.cnt = 0;
+                testStage.showAndWait();
+                if ((Integer) stageMain.getUserData() == 1) {
+                    btnMin.setDisable(false);
+                    btnTest.setVisible(false);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else if(src == 8){
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(Main.class.getResource("view/tests/s/5.fxml"));
+                Parent rootTest = fxmlLoader.load();
+                testStage = new Stage();
+                testStage.setTitle("Самотестирование");
+                testStage.setResizable(false);
+                testStage.setScene(new Scene(rootTest));
+                testStage.initModality(Modality.WINDOW_MODAL);
+                testStage.initOwner(stageMain);
+                TestSControl testSControl = fxmlLoader.getController();
+                testSControl.setTestStage(testStage);
+                TestSControl.src = 64;
+                TestSControl.cnt = 0;
+                testStage.showAndWait();
+                if ((Integer) stageMain.getUserData() == 1) {
+                    btnSynt.setDisable(false);
+                    btnTest.setVisible(false);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(Main.class.getResource("view/tests/s/7.fxml"));
+                Parent rootTest = fxmlLoader.load();
+                testStage = new Stage();
+                testStage.setTitle("Самотестирование");
+                testStage.setResizable(false);
+                testStage.setScene(new Scene(rootTest));
+                testStage.initModality(Modality.WINDOW_MODAL);
+                testStage.initOwner(stageMain);
+                TestSControl testSControl = fxmlLoader.getController();
+                testSControl.setTestStage(testStage);
+                TestSControl.src = 128;
+                TestSControl.cnt = 0;
+                testStage.showAndWait();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

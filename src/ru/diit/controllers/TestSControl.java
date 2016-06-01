@@ -110,7 +110,8 @@ public class TestSControl {
     @FXML
     private Label lblFinish;
 
-    private static int cnt;
+    public static int cnt = 0;
+    public static int src = 0;
 
     private Scene scene1;
     private Scene scene2;
@@ -127,7 +128,8 @@ public class TestSControl {
 
     private  static Stage testStage;
     private Stage spareStage;
-    Alert alertEr;
+    private Alert alertEr;
+    private Alert alertRes;
 
     public void setTestStage(Stage stage){
         testStage = stage;
@@ -252,7 +254,19 @@ public class TestSControl {
             cnt++;
         }
         if (str.length() == 8) {
-            goTo(5);
+            if (src!=32) {
+                goTo(5);
+            } else {
+                alertRes = new Alert(Alert.AlertType.INFORMATION, "Тестирование окончено. Количество правильных ответов: " +
+                        cnt+"/4", ButtonType.OK);
+                alertRes.setTitle("Результат");
+                alertRes.setHeaderText(null);
+                alertRes.show();
+                if (cnt == 4) {
+                    testStage.getOwner().setUserData(1);
+                }
+                testStage.close();
+            }
         } else{
             alertEr.show();
         }
@@ -276,7 +290,19 @@ public class TestSControl {
             cnt++;
         }
         if (rb1True6.isSelected()||rb2True6.isSelected()||rb3True6.isSelected()) {
-            goTo(7);
+            if (src!=64) {
+                goTo(7);
+            } else {
+                alertRes = new Alert(Alert.AlertType.INFORMATION, "Тестирование окончено. Количество правильных ответов: " +
+                        cnt+"/2", ButtonType.OK);
+                alertRes.setTitle("Результат");
+                alertRes.setHeaderText(null);
+                alertRes.show();
+                if (cnt == 2) {
+                    testStage.getOwner().setUserData(1);
+                }
+                testStage.close();
+            }
         } else{
             alertEr.show();
         }
@@ -337,8 +363,18 @@ public class TestSControl {
         alert.setTitle("Результаты");
         alert.setHeaderText(null);
         if (rb1True10.isSelected()||rb2True10.isSelected()||rb3True10.isSelected()) {
-            alert.show();
-            testStage.close();
+            if (src!=128) {
+                alert.show();
+                testStage.close();
+            } else {
+                alertRes = new Alert(Alert.AlertType.INFORMATION, "Тестирование окончено. Количество правильных ответов: " +
+                        cnt+"/4", ButtonType.OK);
+                alertRes.setTitle("Результат");
+                alertRes.setHeaderText(null);
+                alertRes.show();
+                testStage.close();
+            }
+
         } else{
             alertEr.show();
         }

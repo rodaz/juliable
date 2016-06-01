@@ -3,6 +3,9 @@ package ru.diit.controllers;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.TextInputDialog;
 import javafx.stage.Stage;
 import ru.diit.Main;
 
@@ -48,16 +51,28 @@ public class MainController {
     }
 
     public void goToTesting(){
-        try {
-            rootPreTest = FXMLLoader.load(Main.class.getResource("view/preTesting.fxml"));
-            stagePreTest = new Stage();
-            stagePreTest.setTitle("Тестирование");
-            stagePreTest.setResizable(false);
-            stagePreTest.setScene(new Scene(rootPreTest, 300, 200));
-            //stageEducation.getScene().getStylesheets().add("ru/diit/view/styles.css");
-            stagePreTest.show();
-            stageMain.close();
-        } catch (IOException e) {}
+        TextInputDialog alert = new TextInputDialog();
+        alert.setHeaderText("Введите пароль: ");
+        alert.setTitle("Авторизация");
+        alert.showAndWait();
+        if (alert.getResult().equals("12345")) {
+            try {
+                rootPreTest = FXMLLoader.load(Main.class.getResource("view/preTesting.fxml"));
+                stagePreTest = new Stage();
+                stagePreTest.setTitle("Тестирование");
+                stagePreTest.setResizable(false);
+                stagePreTest.setScene(new Scene(rootPreTest, 300, 200));
+                //stageEducation.getScene().getStylesheets().add("ru/diit/view/styles.css");
+                stagePreTest.show();
+                stageMain.close();
+            } catch (IOException e) {
+            }
+        } else {
+            Alert alert1 = new Alert(Alert.AlertType.ERROR, "Неверный пароль", ButtonType.OK);
+            alert1.setTitle("Ошибка!");
+            alert1.setHeaderText(null);
+            alert1.show();
+        }
     }
 
     public void goToTestS(){
@@ -72,6 +87,7 @@ public class MainController {
             //stageEducation.getScene().getStylesheets().add("ru/diit/view/styles.css");
             TestSControl testSControl = fxmlLoader.getController();
             testSControl.setTestStage(stageTestS);
+            TestSControl.cnt = 0;
             stageTestS.show();
             stagePreTest.close();
         } catch (IOException e) {}
