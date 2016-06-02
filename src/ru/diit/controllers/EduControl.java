@@ -47,13 +47,6 @@ public class EduControl {
 
     private static int src = 7;
 
-//    private Image imgJKTrue = new Image("file:resources/images/jk/tableTrue.jpg");
-//    private Image imgJKMin1 = new Image("file:resources/images/jk/min1.jpg");
-//    private Image imgJKMin2 = new Image("file:resources/images/jk/min2.jpg");
-//    private Image imgJKMin3 = new Image("file:resources/images/jk/min3.jpg");
-//    private Image imgJKMin4 = new Image("file:resources/images/jk/min4.jpg");
-//    private Image imgJKSynt = new Image("file:resources/images/jk/synt.jpg");
-
     private Image imgSTrue1 = new Image("ru/diit/images/s/true1.jpg");
     private Image imgSTrue2 = new Image("ru/diit/images/s/true2.jpg");
     private Image imgSTrue3 = new Image("ru/diit/images/s/true3.jpg");
@@ -187,7 +180,6 @@ public class EduControl {
 
     @FXML
     public void initialize(){
-        // Выравниваем по центру
         vboxSrc.setAlignment(Pos.CENTER);
         vboxR.setAlignment(Pos.CENTER);
         vboxS.setAlignment(Pos.CENTER);
@@ -196,13 +188,6 @@ public class EduControl {
 
     }
 
-    public void viewRMin(){
-//        pagination = new Pagination(4);
-//        pagination.setPageFactory((Integer pageIndex) -> createPage(pageIndex));
-//        vboxR.getChildren().addAll(pagination);
-    }
-
-    //---------------------------------------------------------------------------------------
     private void clearSBox(){
         ObservableList<Node> nodes = vboxS.getChildren();
         if (nodes.size() != 0){
@@ -687,32 +672,12 @@ public class EduControl {
                     @Override
                     public void handle(ActionEvent t) {
                         dogSynt5.getChildren().setAll(imgViewSSynt25);
+                        btnTest.setVisible(true);
                     }
                 }));
         tlSynt5.setCycleCount(1);
     }
 
-
-    //------------------------------------------------------------------------------------------
-    public void viewEMin(){
-//        vboxE.setAlignment(Pos.CENTER);
-//        pagination = new Pagination(4);
-//        pagination.setPageFactory((Integer pageIndex) -> createPage(pageIndex));
-//        pagination.getStyleClass().add(Pagination.STYLE_CLASS_BULLET);
-//        vboxE.getChildren().addAll(pagination);
-    }
-
-    public void viewJKTrue(){
-
-    }
-
-    public void viewJKMin(){
-
-    }
-
-    public void viewJKSynt(){
-
-    }
     public void goToTesting(){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();

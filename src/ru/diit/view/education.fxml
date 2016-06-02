@@ -41,7 +41,7 @@
                               <Insets bottom="3.0" />
                            </HBox.margin>
                         </Text>
-                        <Button mnemonicParsing="false" onAction="#viewRMin" prefHeight="50.0" text="Минимизация" textAlignment="CENTER" wrapText="true">
+                        <Button mnemonicParsing="false" prefHeight="50.0" text="Минимизация" textAlignment="CENTER" wrapText="true">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -138,7 +138,7 @@
                   </HBox>
                   <VBox fx:id="vboxSrc">
                      <children>
-                        <Button mnemonicParsing="false" fx:id="btnTest" onAction="#goToTrueTest" prefHeight="25.0" prefWidth="76.0" text="Завершить" visible="false"/>
+                        <Button fx:id="btnTest" mnemonicParsing="false" onAction="#goToTrueTest" prefHeight="25.0" prefWidth="76.0" text="Завершить" visible="false" />
                         <VBox fx:id="vboxS">
 
                         </VBox>
@@ -177,7 +177,7 @@
                               <Insets bottom="3.0" />
                            </HBox.margin>
                         </Text>
-                        <Button mnemonicParsing="false" onAction="#viewEMin" prefHeight="50.0" text="Минимизация" wrapText="true">
+                        <Button mnemonicParsing="false" prefHeight="50.0" text="Минимизация" wrapText="true">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -219,7 +219,7 @@
                <items>
                   <HBox alignment="CENTER">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#viewJKTrue" prefHeight="50.0" text="Таблица истинности" textAlignment="CENTER" wrapText="true">
+                        <Button mnemonicParsing="false" prefHeight="50.0" text="Таблица истинности" textAlignment="CENTER" wrapText="true">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -240,7 +240,7 @@
                               <Insets bottom="3.0" />
                            </HBox.margin>
                         </Text>
-                        <Button mnemonicParsing="false" onAction="#viewJKMin" prefHeight="50.0" text="Минимизация" wrapText="true">
+                        <Button mnemonicParsing="false" prefHeight="50.0" text="Минимизация" wrapText="true">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -261,7 +261,7 @@
                               <Insets bottom="3.0" />
                            </HBox.margin>
                         </Text>
-                        <Button mnemonicParsing="false" onAction="#viewJKSynt" prefHeight="50.0" text="Синтез JK-триггера" textAlignment="CENTER" wrapText="true">
+                        <Button mnemonicParsing="false" prefHeight="50.0" text="Синтез JK-триггера" textAlignment="CENTER" wrapText="true">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -275,11 +275,6 @@
                </items>
             </SplitPane>
          </content>
-      </Tab>
-      <Tab onSelectionChanged="#goToTesting" text="Тестирование">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-        </content>
       </Tab>
   </tabs>
 </TabPane>

@@ -5,9 +5,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextInputDialog;
 import javafx.stage.Stage;
 import ru.diit.Main;
+import ru.diit.PassTextInputDialog;
 
 import java.io.IOException;
 
@@ -20,7 +22,6 @@ public class MainController {
     private Parent rootPreTest;
     private Parent rootTestS;
 
-
     public void setStagePreTest(Stage stage){this.stagePreTest = stage;}
     public void setStageMain(Stage stage){
         this.stageMain = stage;
@@ -28,14 +29,6 @@ public class MainController {
 
     public void goToEducation(){
         try {
-//            rootEducation = FXMLLoader.load(Main.class.getResource("view/education.fxml"));
-//            stageEducation = new Stage();
-//            stageEducation.setTitle("Education");
-//            stageEducation.setResizable(false);
-//            stageEducation.setScene(new Scene(rootEducation, 700, 829));
-//            //stageEducation.getScene().getStylesheets().add("ru/diit/view/styles.css");
-//            stageEducation.show();
-//            stageMain.close();
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(Main.class.getResource("view/education.fxml"));
             rootEducation = fxmlLoader.load();
@@ -51,7 +44,7 @@ public class MainController {
     }
 
     public void goToTesting(){
-        TextInputDialog alert = new TextInputDialog();
+        PassTextInputDialog alert = new PassTextInputDialog();
         alert.setHeaderText("Введите пароль: ");
         alert.setTitle("Авторизация");
         alert.showAndWait();
@@ -62,7 +55,6 @@ public class MainController {
                 stagePreTest.setTitle("Тестирование");
                 stagePreTest.setResizable(false);
                 stagePreTest.setScene(new Scene(rootPreTest, 300, 200));
-                //stageEducation.getScene().getStylesheets().add("ru/diit/view/styles.css");
                 stagePreTest.show();
                 stageMain.close();
             } catch (IOException e) {
@@ -84,7 +76,6 @@ public class MainController {
             stageTestS.setTitle("Тестирование по S триггеру");
             stageTestS.setResizable(false);
             stageTestS.setScene(new Scene(rootTestS));
-            //stageEducation.getScene().getStylesheets().add("ru/diit/view/styles.css");
             TestSControl testSControl = fxmlLoader.getController();
             testSControl.setTestStage(stageTestS);
             TestSControl.cnt = 0;

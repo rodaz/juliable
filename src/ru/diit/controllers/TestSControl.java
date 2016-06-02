@@ -1,20 +1,13 @@
 package ru.diit.controllers;
 
-import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.Pane;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import ru.diit.Main;
-
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Objects;
 
 /**
@@ -151,68 +144,8 @@ public class TestSControl {
         alertEr = new Alert(Alert.AlertType.ERROR, "Ошибка пользовательского ввода", ButtonType.OK);
         alertEr.setTitle("Ошибка");
         alertEr.setHeaderText(null);
+    }
 
-    }
-    public void backTo1(){
-        if (rb1True2.isSelected() && rb2True2.isSelected()){
-            cnt--;
-        }
-        goTo(1);
-    }
-    public void backTo2(){
-        if (rb1True3.isSelected() && (rb2True3.isSelected() && rb3True3.isSelected())){
-            cnt--;
-        }
-        goTo(2);
-    }
-    public void backTo3(){
-        String str = fld1Ans4.getText()+fld2Ans4.getText()+fld3Ans4.getText()+fld4Ans4.getText()+
-                fld5Ans4.getText()+fld6Ans4.getText()+fld7Ans4.getText()+fld8Ans4.getText();
-        if (str.equals("01001111")){
-            cnt--;
-        }
-        goTo(3);
-    }
-    public void backTo4(){
-        String str = fld1Ans5.getText()+fld2Ans5.getText()+fld3Ans5.getText()+fld4Ans5.getText()+
-                fld5Ans5.getText()+fld6Ans5.getText()+fld7Ans5.getText()+fld8Ans5.getText();
-        if (str.equals("11011100")){
-            cnt--;
-        }
-        goTo(4);
-    }
-    public void backTo5(){
-        if (rb2True6.isSelected()){
-            cnt--;
-        }
-        goTo(5);
-    }
-    public void backTo6(){
-        if (fld1Ans7.getText().equals("R") && fld2Ans7.getText().equals("S")){
-            cnt--;
-        }
-        goTo(6);
-    }
-    public void backTo7(){
-        String str = fld1Ans8.getText()+fld2Ans8.getText()+fld3Ans8.getText()+fld4Ans8.getText();
-        if (str.equals("SRQQ")){
-            cnt--;
-        }
-        goTo(7);
-    }
-    public void backTo8(){
-        if (fld1Ans9.getText().equals("Хранение")&&fld2Ans9.getText().equals("Сброс")&&
-                fld3Ans9.getText().equals("Установка")&&fld4Ans9.getText().equals("")){
-            cnt--;
-        }
-        goTo(8);
-    }
-    public void backTo9(){
-        if (rb3True10.isSelected()){
-            cnt++;
-        }
-        goTo(9);
-    }
     public void goTo2(){
         if (fldAns1.getText().equals("комбинационная схема")) {
             cnt++;
@@ -384,7 +317,6 @@ public class TestSControl {
     public void goToClose(){
         testStage.close();
     }
-
 
     public void filter4Ans(Event event) {
         String str;
